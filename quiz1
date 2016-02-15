@@ -1,0 +1,11 @@
+Dollar sign means  you are run in shell ('do something')
+directory is where you store files (a folder)
+cd is command for change directory
+mkdir is command make directory
+ls -l is command list contents of directory
+'vim somefile' is command to start vim with a file
+~ is symbol for home directory
+normal - vavigate insert- type
+ab[cd]ef = abcef & abdef
+ab[cd]ef[gh]ij = abcefgij & abdefgij & abdefhij & abdefhij
+

@@ -1,0 +1,63 @@
+=begin
+
+#'Hobo' programming language
+# Okay, so maybe the ** are not the best idea, but the >> is GENIUS.  Seriously, f#ck
+# the hashrocket.  Just kidding.
+Numbers: Digits 0-9
+Strings:  **Hello World** ,  *Yo*
+Boolean: Yay/Nay
+Array: TheMan[] 
+Hash:  Poor{*Person* >> Sandwich}
+Nil:  Zilch
+
+{ **Ice Cream** >> {
+    *Haagen Dazs*  >> *Chocolate*,
+    *Cold Stone Creamery* >> *Rocky Road*,
+  },
+ { **Pizza** >> {*Matthew* >> *blue*}
+{Ice Cream}
+{*Haagen Dazs*  >> *Chocolate*, *Cold Stone Creamery* >> *Rocky Road*}
+
+for (i=0, i < 13, i--) 
+	value = Order[i]
+	print *There are *, Order, * sandwiches left.\n*
+	print *There are *, Order[i], * sandwiches left\n*
+	i -= 1
+end
+
+Compare implementations What are the similarities?
+	{} for hash, just makes sense visually
+What are the differences
+	for i in X-X, instead of for i in X..X
+	>> instead of =>
+	old school for loop, Ruby does this weird
+The structures
+	for (i=0, i < 13, i--) 
+Which is your favourite (and why)?
+	>> instead of =>, slightly quicker to implement
+
+Why these structures?
+	some of them follow conventions from older languages, some are just easier to type
+Can you think of any other types of data that we don't have a structure for?
+	not right off
+What would we lose if we removed some of these?
+
+Look up the words "syntax" and "semantics" and write down the definitions. Which part of what you learned today is syntax? Which part is semantics? Include specific examples.
+	syntax is just how it's typed out (like above).  semantics involves the underlying meaning
+Why are we starting here and not somewhere else?
+
+Modeling (describing relationships)
+
+How could you represent this sentence in Ruby: My friend's name is, Janet.
+
+Find a real-world example that you can describe with these, similar to mine (maybe a sports team or the train system)
+
+Can you think of any real-world examples that you can't describe with these types?
+
+Are all collections of names ordered?
+
+If they are, how come?
+
+If they aren't, do you lose or gain anything?
+
+=end

@@ -1,0 +1,26 @@
+collection = ["a", "b", "c"]
+
+#If all your arrays had to contain exactly 2 elements, how would you represent an array of arbitrary length?
+
+["a",["b", "c"]]
+
+["a",["b",["c",nil]]]
+
+#If you could not use arrays at all, how would you represent an array of arbitrary length?
+collection[0]
+collection[1][0]
+collection[1][1][0]
+collection[1][1][1][0]
+collection[1][1][1][1][0]
+collection[1][1][1][1][1]
+
+#How would you add an element? How would you remove it?
+#this adds parameter 'cat' at index 1 and pushes everything else over
+array.insert(1, 'cat')
+#the method pop removes the last element in an array and returns it
+array = ["a", "b", "c"]
+array.pop  #=> 6
+array      #=> [1, 2, 3, 4, 5]
+
+
+
