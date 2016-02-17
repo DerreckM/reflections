@@ -1,0 +1,36 @@
+Dear Me From Two Weeks Ago,
+
+Take a deep breath.  All is well and will be well.  You will cover a lot of ground,
+but only to realize that you have just skimmed the surface.  You'll learn many new
+VIM key bindings that will make you significantly quicker and more efficient, you
+will understand the 6 data structures: strings, numbers, booleans, hashes, arrays,
+and nil. You will realize the power of linked lists.  Linked lists are useful for
+many things, including the concept of inheritance for classes.
+
+You will learn how to construct class structures, methods, local and instance
+variables, constants, and peculiarities specific to Ruby.  Everything is an object
+in Ruby.  You will learn the power of '!', which can change a variable by force.
+Methods you may or may not have heard about work in interesting ways.
+
+You will learn that a hashrocket (=>) will show you output (and also is part of a
+hash, more on that later).
+
+"ABC".downcase.reverse.upcase.chars.first => "C"
+
+If you declare-
+a = "ABC"
+a.downcase => "abc"
+
+Still however,
+a = "ABC"  (does not change the assigned value)
+
+If you want to change the assigned value, use:
+a.downcase! => "abc"  (does change the assigned value)
+
+Future me, or future-future you, will know modules and singleton methods.  I am only
+just understanding the singleton method.  Like I said about just skimming the surface,
+we got along way to go.
+
+
+
+
