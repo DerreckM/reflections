@@ -1,0 +1,35 @@
+I've been having many challenges on the day 2 of working with Gems.  I missed
+much of the Tuesday morning that was spent working on this, and have been
+behind ever since.  Some challenges were simply realizing that you cannot run
+rspec from the lib or bin directories, but needed to run it from the parent
+gitloc directory.
+
+The greatest frustration I feel is that when I fix one error, I immediately get
+another.  This is going to be probably my toughest hurdle to becoming a developer,
+I often don't have patience when things blow up.
+
+The major error I had today was when I tried to run bin/gitloc "$PWD" and got message
+"invalid byte sequence in UTF-8(ArgumentError).  This requires debugging gitloc,
+using pry to identify where the gitloc file breaks.  I didn't know how to do this,
+so Josh helped me trace where the error occurred.  The initial issue was with the
+lib/gitloc.rb file at line 18 with the '!~'.  We placed a pry before line 18 using
+'\p'.  The first two files already gave the expected output of the number of strings
+items in the array and the file (or local variable).  THe third local variable
+"gitloc-derreckmansheim-0.1.0.gem" contained a ridiculous amount of binary.  By
+running pry> loc = File.readlines(filename).count which was where the code broke at
+line 20 we discovered that the output 5 is the number of string lines of code (loc).
+By typing at pry(main)> filename, We see the "gitloc-derreckmansheim-0.1.0.gem"
+We want to change this by saying filename = "bin/gitloc", which changed the contents of
+"gitloc-derreckmansheim-0.1.0.gem" to output 4, instead of a bunch of binary junk.
+By prying into loc = File.readlines(filename).count { |line| line !~ /^\s*$/ } we saw
+the regular expressions (regex) in which the /^\s*$/, means the regex in / / from
+beginning of line (^) has whitespace (\s) unlimited (*) until end of line ($). If we
+that when we pry into File.readlines(filename) we see five lines, the second of which
+is empty with just "\n".  We can pry(main)> File.readlines(filename)[1] !~ /^\s*$/ =>
+false.  All other lines output true.  We proceed to lib/gitloc.rb and remove that
+blank line.
+
+Now when I run bin/gitloc "$PWD" I get all the desired output, but lucky me, I get
+yet another error that I will have to figure out later: bin/gitloc:5:in `<main>':
+uninitialized constant Gitloc (NameError)
+

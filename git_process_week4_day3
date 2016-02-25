@@ -1,0 +1,23 @@
+I thought I knew most of git's functionality just from our committing and pushing files
+to Github.  Little did I know that there is so much more capability, particularly when
+working on group projects and/or pair programming.
+
+One member of my team offered to be the host.  I kind of wish I had actually, just to
+remember where the buttons were to do this.  The process involves inputting other
+contributors' email addresses to give them commit access in order to push their changes
+to the codebase into the shared main repository.
+
+We pushed some things up to Github, but what we thought were files, were actually branches.
+I did not realize you could push a full branch up to Github.
+
+I guess I should backtrack and say that before you can commit branches to Github you need
+to ensure you have all prior items committed.  You can say git status and see if there is
+any uncommitted work.  Then I need to do a git pull to make sure I have the latest copy of
+the code in the shared repository.  When we want to create a branch, we need to ensure we are
+on the master branch and then we git checkout -b givename.  We do our work and then when
+we are ready we git push -u origin givename.  Where my group had issues was with the next
+step.  On Github you are to create a pull request to the master branch.  This is from the
+third tab in github.  Then ANOTHER member of your team must merge your changes when they
+deem them acceptable.  Finally, we go back to the master branch by git checkout master and
+pull the new changes by git pull.  We are now ready to start the process over if we wish.
+

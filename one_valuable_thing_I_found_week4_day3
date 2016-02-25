@@ -1,0 +1,14 @@
+One valuable thing I have found while doing Test Driven Development is to have
+three terminal tabs open at once.  This allows me to view, edit, and save changes to
+my test file, ruby file, and a third window to run my mrspec or rspec from.  Many
+people use only two windows and toggle back and forth from the test file to executing
+the test, it is only a matter of preference.  I have also used two windows with efficient
+results.  I do not recommend any more than three tabs though, since it greatly affects
+the user's ability to see all the code.  For most operations one or two tabs will suffice,
+but when doing TDD in a small incremental way, you do not really need to see all your code at
+any one time, so three tabs are fine.
+
+Another thing I found, or rather, shown by a fellow classmate was the ability to make my Mac's application
+dock smaller.  It was a fresh perspective that now allows me to see more of my terminal and browser
+windows.  This small increase in real estate will pay dividends down the line.
+
